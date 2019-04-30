@@ -33,8 +33,20 @@ changeImageButton.addEventListener("Click", changeImage);
 
 // BONUS:
 // select "add todo" button (querySelector)
+const addToDoButton = document.querySelector('#btn-addTodo');
+console.log('addToDoButton :', addToDoButton);
 // add click event listener
+
 // execute addTodo() function on click event
+console.log("Click", addTodo());
+function addToDo() {
+  const todoList = document.querySelector('#todoList');
+  const todoInput = document.querySelector('#todoInput');
+  const liElement = document.createElement('li');
+  liElement.innerHtml = todoInput.value;
+  todoList.appendChild(liElement);
+}
+addToDoButton.addEventListener("Click", addToDo);
 // define addTodo() function
 // in this function:
 //    get todoList element
