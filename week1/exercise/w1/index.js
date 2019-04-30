@@ -7,10 +7,6 @@ const changeImageButton = document.querySelector('#btn-changeImage');
 console.log('changeImageButton: ', changeImageButton);
 
 
-
-const changeImage = () => {
-  console.log('Click');
-}
 function changeImage() {
   const image = document.getElementById('imageToChange');
   const imageInput = document.getElementById('imageInput');
@@ -18,9 +14,7 @@ function changeImage() {
   image.src = imageInput.value;
 
 }
-changeImageButton.addEventListener("Click", () => {
-  console.log("Click");
-});
+changeImageButton.addEventListener("Click", changeImage);
 
 
 
